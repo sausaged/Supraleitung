@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -27,5 +27,52 @@ Energieversorgung ermöglichen könnte. Auserdem haben Supraleiter noch andere s
 Eigenschaften, welche noch nicht vollständig verstanden wurden. 
 
 \section{Der elektrischer Wiederstand}
+Der elektrische Widerstand ist eine Eigenschaft von Materialien, welche den Fluss von elektrischen
+Ladungen behindert. Er wird in Ohm gemessen und ist abhängig von der Temperatur und dem Material.
+Der Widerstand eines Leiters ist gegeben durch das Ohmsche Gesetz:
+\begin{equation}
+    R = \frac{U}{I}
+\end{equation}
+wobei $R$ der Widerstand, $U$ die Spannung und $I$ der Strom ist.
+
+
+\subsection{Temperaturabhängigkeit des Widerstands}
+Wo steckt nun die Temperaturabhängigkeit?
+
+Der Widerstand eines bestimmten Leiterabschnitts kann durch die Formel
+\begin{equation}
+    R = \rho \frac{L}{A}
+\end{equation}
+beschrieben werden, wobei $\rho$ der spezifische Widerstand des Materials, $L$ die Länge des Leiters und $A$ die Querschnittsfläche des Leiters ist. Der spezifische Widerstand $\rho$ ist eine Materialkonstante und hängt stark von der Temperatur ab. Bei den meisten Materialien nimmt der spezifische Widerstand mit steigender Temperatur zu, was bedeutet, dass der Widerstand des Leiters ebenfalls zunimmt.
+
+Für Metalle kann der Zusammenhang zwischen dem spezifischen Widerstand und der Temperatur oft näherungsweise durch die Formel
+\begin{equation}
+    \rho(T) = \rho_0 (1 + \alpha (T - T_0))
+\end{equation}
+beschrieben werden, wobei $\rho_0$ der spezifische Widerstand bei einer Referenztemperatur $T_0$ und $\alpha$ der Temperaturkoeffizient des Widerstands ist. Diese Beziehung zeigt, dass der spezifische Widerstand und damit der Widerstand des Leiters mit steigender Temperatur linear zunimmt.
+
+\section{Supraleitung}
+Supraleitung ist ein Phänomen, bei dem elektrischer Strom ohne Widerstand fließt. Dieser Effekt tritt 
+bei sehr niedrigen Temperaturen auf, die als kritische Temperatur bezeichnet werden. Wenn ein Material 
+unter diese kritische Temperatur abgekühlt wird, geht es in den supraleitenden Zustand über und der 
+elektrische Widerstand fällt auf null.
+
+\subsection{Meissner-Ochsenfeld-Effekt}
+Ein weiteres wichtiges Merkmal der Supraleitung ist der Meissner-Ochsenfeld-Effekt. Dieser Effekt 
+beschreibt die vollständige Verdrängung des Magnetfeldes aus dem Inneren eines supraleitenden Materials, 
+wenn es in den supraleitenden Zustand übergeht. Dies bedeutet, dass Supraleiter perfekte Diamagneten sind.
+
+\subsection{Anwendungen der Supraleitung}
+Supraleitung hat viele potenzielle Anwendungen, darunter:
+\begin{itemize}
+    \item Verlustfreie Energieübertragung: Da supraleitende Materialien keinen elektrischen Widerstand haben, 
+    könnten sie verwendet werden, um elektrische Energie ohne Verluste zu übertragen.
+    \item Magnetresonanztomographie (MRT): Supraleitende Magnete werden in \\ MRT-Geräten verwendet, um starke 
+    Magnetfelder zu erzeugen.
+    \item Teilchenbeschleuniger: Supraleitende Magnete werden auch in Teilchenbeschleunigern wie dem Large 
+    Hadron Collider (LHC) verwendet, um Teilchen auf hohe Geschwindigkeiten zu beschleunigen.
+\end{itemize}
+
+
 
 \end{document}
