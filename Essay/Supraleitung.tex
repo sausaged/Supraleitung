@@ -3,7 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -26,43 +30,23 @@ ohne Wiederstand fließt, wodurch eine verlustfreie Energieübertragung möglich
 Energieversorgung ermöglichen könnte. Auserdem haben Supraleiter noch andere spannende 
 Eigenschaften, welche noch nicht vollständig verstanden wurden. 
 
-\section{Der elektrischer Wiederstand}
-Der elektrische Widerstand ist eine Eigenschaft von Materialien, welche den Fluss von elektrischen
-Ladungen behindert. Er wird in Ohm gemessen und ist abhängig von der Temperatur und dem Material.
-Der Widerstand eines Leiters ist gegeben durch das Ohmsche Gesetz:
-\begin{equation}
-    R = \frac{U}{I}
-\end{equation}
-wobei $R$ der Widerstand, $U$ die Spannung und $I$ der Strom ist.
+
+\input{Elektronengas.tex}
+\newpage
+
+\input{BCS_Theorie.tex}
 
 
-\subsection{Temperaturabhängigkeit des Widerstands}
-Wo steckt nun die Temperaturabhängigkeit?
 
-Der Widerstand eines bestimmten Leiterabschnitts kann durch die Formel
-\begin{equation}
-    R = \rho \frac{L}{A}
-\end{equation}
-beschrieben werden, wobei $\rho$ der spezifische Widerstand des Materials, $L$ die Länge des Leiters und $A$ die Querschnittsfläche des Leiters ist. Der spezifische Widerstand $\rho$ ist eine Materialkonstante und hängt stark von der Temperatur ab. Bei den meisten Materialien nimmt der spezifische Widerstand mit steigender Temperatur zu, was bedeutet, dass der Widerstand des Leiters ebenfalls zunimmt.
 
-Für Metalle kann der Zusammenhang zwischen dem spezifischen Widerstand und der Temperatur oft näherungsweise durch die Formel
-\begin{equation}
-    \rho(T) = \rho_0 (1 + \alpha (T - T_0))
-\end{equation}
-beschrieben werden, wobei $\rho_0$ der spezifische Widerstand bei einer Referenztemperatur $T_0$ und $\alpha$ der Temperaturkoeffizient des Widerstands ist. Diese Beziehung zeigt, dass der spezifische Widerstand und damit der Widerstand des Leiters mit steigender Temperatur linear zunimmt.
 
-\section{Supraleitung}
-Supraleitung ist ein Phänomen, bei dem elektrischer Strom ohne Widerstand fließt. Dieser Effekt tritt 
-bei sehr niedrigen Temperaturen auf, die als kritische Temperatur bezeichnet werden. Wenn ein Material 
-unter diese kritische Temperatur abgekühlt wird, geht es in den supraleitenden Zustand über und der 
-elektrische Widerstand fällt auf null.
 
-\subsection{Meissner-Ochsenfeld-Effekt}
-Ein weiteres wichtiges Merkmal der Supraleitung ist der Meissner-Ochsenfeld-Effekt. Dieser Effekt 
-beschreibt die vollständige Verdrängung des Magnetfeldes aus dem Inneren eines supraleitenden Materials, 
-wenn es in den supraleitenden Zustand übergeht. Dies bedeutet, dass Supraleiter perfekte Diamagneten sind.
 
-\subsection{Anwendungen der Supraleitung}
+
+
+
+
+\section{Anwendungen der Supraleitung}
 Supraleitung hat viele potenzielle Anwendungen, darunter:
 \begin{itemize}
     \item Verlustfreie Energieübertragung: Da supraleitende Materialien keinen elektrischen Widerstand haben, 
@@ -74,5 +58,26 @@ Supraleitung hat viele potenzielle Anwendungen, darunter:
 \end{itemize}
 
 
+\begin{tikzpicture}
+    % Gitterstruktur mit positiven Atomrümpfen
+    \foreach \x in {0,...,6} {
+        \foreach \y in {0,...,4} {
+            \node[circle, draw=gray!80, fill=gray!40] at (\x,\y) {};
+        }
+    }
 
+    % Elektron-Gitter-Wechselwirkung (Polaron)
+    % Kreise zur Hervorhebung
+    \draw[dashed] (2.5,2) circle [radius=1];
+    \draw[dashed] (4.5,2) circle [radius=1];
+
+    % Elektronenbewegungspfeile
+    \draw[->] (2.5,2) -- (4.5,2);
+
+    % Beschriftungen
+    \node[align=center] at (2.5,-0.5) {\textbf{Elektron - Gitter Wechselwirkung}\\(Polaron)};
+    
+    % Positive Atomrümpfe beschriften
+    \node[align=center] at (6,-0.5) {\textbf{positiv geladene Atomrümpfe}};
+\end{tikzpicture}
 \end{document}
