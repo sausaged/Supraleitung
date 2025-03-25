@@ -3,11 +3,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
+
 \usepackage{hyperref}
 \usepackage{graphicx}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
 
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing, arrows.meta}
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -36,48 +37,8 @@ Eigenschaften, welche noch nicht vollständig verstanden wurden.
 
 \input{BCS_Theorie.tex}
 
+\input{Meißner-Ochsenfeld-Effekt.tex}
 
+\input{Anwendungen_SL.tex}
 
-
-
-
-
-
-
-
-
-\section{Anwendungen der Supraleitung}
-Supraleitung hat viele potenzielle Anwendungen, darunter:
-\begin{itemize}
-    \item Verlustfreie Energieübertragung: Da supraleitende Materialien keinen elektrischen Widerstand haben, 
-    könnten sie verwendet werden, um elektrische Energie ohne Verluste zu übertragen.
-    \item Magnetresonanztomographie (MRT): Supraleitende Magnete werden in \\ MRT-Geräten verwendet, um starke 
-    Magnetfelder zu erzeugen.
-    \item Teilchenbeschleuniger: Supraleitende Magnete werden auch in Teilchenbeschleunigern wie dem Large 
-    Hadron Collider (LHC) verwendet, um Teilchen auf hohe Geschwindigkeiten zu beschleunigen.
-\end{itemize}
-
-
-\begin{tikzpicture}
-    % Gitterstruktur mit positiven Atomrümpfen
-    \foreach \x in {0,...,6} {
-        \foreach \y in {0,...,4} {
-            \node[circle, draw=gray!80, fill=gray!40] at (\x,\y) {};
-        }
-    }
-
-    % Elektron-Gitter-Wechselwirkung (Polaron)
-    % Kreise zur Hervorhebung
-    \draw[dashed] (2.5,2) circle [radius=1];
-    \draw[dashed] (4.5,2) circle [radius=1];
-
-    % Elektronenbewegungspfeile
-    \draw[->] (2.5,2) -- (4.5,2);
-
-    % Beschriftungen
-    \node[align=center] at (2.5,-0.5) {\textbf{Elektron - Gitter Wechselwirkung}\\(Polaron)};
-    
-    % Positive Atomrümpfe beschriften
-    \node[align=center] at (6,-0.5) {\textbf{positiv geladene Atomrümpfe}};
-\end{tikzpicture}
 \end{document}

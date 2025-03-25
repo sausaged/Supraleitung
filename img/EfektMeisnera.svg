@@ -1,0 +1,42 @@
+<svg width="525" height="525" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<marker id="arrow" viewBox="-4 -4.5 12 9" markerWidth="12" markerHeight="9" orient="auto">
+<path d="M8 0-4 4.5a8 8 0 0 0 0-9Z" stroke="none"/>
+</marker>
+<linearGradient id="lgBlue">
+<stop stop-color="#FFF"/>
+<stop offset=".59" stop-color="#1200CF"/>
+<stop offset="1" stop-color="#1200CF"/>
+</linearGradient>
+<radialGradient id="rgBlue1" xlink:href="#lgBlue" cx="108.5" cy="243.1" r="160" gradientUnits="userSpaceOnUse"/>
+<radialGradient id="rgBlue2" xlink:href="#lgBlue" cx="358.8" cy="229.2" r="160" gradientUnits="userSpaceOnUse"/>
+</defs>
+<g stroke="#9E9E9E" stroke-width=".81">
+<circle cx="129.33" cy="263.94" r="74.3" fill="url(#rgBlue1)"/>
+<circle cx="379.6" cy="249.96" r="74.3" fill="url(#rgBlue2)"/>
+</g>
+<g marker-end="url(#arrow)" fill="none" stroke="#000" stroke-width="1.88">
+<path d="M60.2 449.1V91.8"/>
+<path d="M77.74 449.1V91.8"/>
+<path d="M95.29 449.1V91.8"/>
+<path d="M112.83 449.1V91.8"/>
+<path d="M130.37 449.1V91.8"/>
+<path d="M147.91 449.1V91.8"/>
+<path d="M165.46 449.1V91.8"/>
+<path d="M183 449.1V91.8"/>
+<path d="M200.54 449.1V91.8"/>
+<g id="left">
+<path d="M307.63 445.56V356.25c0-7.7-3.33-14.15-7.92-20.44s-10.5-12.17-16.5-19.73c-12-14.81-23.86-34.48-23.86-68.89s11.91-52.31 23.68-66.85c6-7.26 12.15-13.4 16.73-19.65s7.87-12.68 7.87-20.38V88.28"/>
+<path d="M328.94 445.56V356.25c0-7.73-3.7-14.06-8.91-20.35s-12.16-12.39-18.75-19.79c-13.64-14.82-27.19-34.54-27.19-68.92s13.43-52.4 27.07-66.93c6.82-7.27 13.67-13.29 18.87-19.54s8.91-12.68 8.91-20.41V88.28"/>
+<path d="M347 445.56V356.25c0-7.75-4-14.09-9.62-20.38s-13.04-12.5-20.41-19.91c-14.73-14.81-29.22-34.41-29.22-68.77s14.61-52.25 29.11-66.9c7.37-7.27 14.54-13.29 20.29-19.42s9.85-12.8 9.85-20.56V88.28"/>
+<path d="M367.22 445.56V356.25c0-7.8-4.58-14.05-11.03-20.33s-14.94-12.47-23.41-19.88c-16.92-14.82-33.56-34.53-33.56-68.85s16.88-52.1 33.45-66.87c8.47-7.27 16.96-13.38 23.41-19.63s11.14-12.58 11.14-20.38V88.28"/>
+</g>
+<use xlink:href="#left" x="-759.2" transform="scale(-1,1)"/>
+</g>
+<g font-family="Liberation Sans" font-size="32" text-anchor="middle">
+<text x="129.11" y="62.05">B</text>
+<text x="378.07" y="56.43">B</text>
+<text x="130.12" y="487.15">T&gt;T<tspan dy="7.2">c</tspan></text>
+<text x="378.38" y="481.67">T&lt;T<tspan dy="7.2">c</tspan></text>
+</g>
+</svg>
