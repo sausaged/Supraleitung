@@ -1,2 +1,53 @@
 \section{Anwendungen der Supraleitung}
+Die wohl theoretisch simpelste Anwendung eines Supraleiters wäre, ihn als Ersatz für klassische Stromleitungen zu 
+verwenden. So konnte man zum Beispiel die Längste Deutsche Stromtrasse(SüdLink), mit einer Länge von $700km$, 
+durch Supraleitung ersetzen. 
 
+Um den die Verlustleistung $P_V$ auf z. B. der SüdLink Stromtrasse zu berechnen kann man folgende Formel verwenden:
+\begin{equation}
+    P_V = R \cdot I^2
+\end{equation}
+wobei $R$ der Widerstand der Leitung in Ohm und $I$ der Strom in Ampere ist.
+Die SüdLink Stromtrasse wurde als Hochspannungs-Gleichstrom-Übertragung(HGÜ) konzipiert, was die Verlustleistung
+deutlich reduziert, da hier der Strom mit hoher Spannung und niedriger Stromstärke übertragen wird und die Verlustleistung
+quadratisch mit der Stromstärke steigt.
+
+Um die Formel anwenden zu können brachen wir noch den Widerstand der Leitung. Der Widerstand einer Leitung lässt sich
+mit der Formel:
+\begin{equation}
+    R = \rho \cdot \frac{L}{A}
+\end{equation}
+berechnen, wobei $\rho$ der spezifische Widerstand des Materials in Ohm Meter, $L$ die Länge der Leitung in Meter und $A$
+die Querschnittsfläche der Leitung in Quadratmeter ist. Für Kupfer beträgt der spezifische Widerstand $\rho = 1.68 \cdot 10^{-8} \Omega \cdot m$.
+Der Querschnitt der SüdLink Stromtrasse beträgt $A=2100mm^2 = 0,0021m^2$. Daraus folgt:
+\begin{equation}
+    R = 1.68 \cdot 10^{-8} \Omega \cdot m \cdot \frac{700000m}{0.0021m^2} = 5.6 \Omega
+\end{equation}
+Nun brauchen wir nur noch den Strom $I$ um die Verlustleistung zu berechnen. Eine typische Spannung für eine HGÜ Trasse 
+ist $U = 525kV = 525000V$. SüdLing hat eine Übertragungsleistung von $P = 4GW = 4000000000W$. So ergibt sich der Strom mit folgender Formel:
+\begin{equation}
+    I = \frac{P}{U} = \frac{4 \cdot 10^9W}{525000V} \approx 7619.05A
+\end{equation}
+Jetzt können wir die Werte in die Formel für die Verlustleistung einsetzen:
+\begin{equation}
+    P_V = 5.6 \Omega \cdot (7619.05A)^2 \approx 3.25 \cdot 10^8W = 325MW
+\end{equation}
+
+Also beträgt der Leistungsverlust $P_V = 235MW$. Diese Berechnung ist aber nur eine grobe Schätzung, da die Stromtrasse natürlich 
+nicht aus einen kontinuierlichem 700 km langen Kupferdraht besteht. Es gibt deshalb noch die Faustregel, dass die Leistung auf 
+100 km um 0,5\% sinkt. Also bei 700 km wären das 3,5\%. 3,5\% von 4GW sind 140MW was der Leistungsverlust auf der SüdLink Stromtrasse
+nach der Faustregel wäre. Aber 140MW sind immer noch eine Menge Energie die verloren geht. Mit 140MW könnte man zum Beispiel
+den durchschnittlichen Strombedarf von 70.000 bis 140.000 Haushalten decken, was ungefähr der Größe einer Stadt wie Bonn.
+Wenn die Stromtrasse aus Supraleitern bestehen würde, wäre der Leistungsverlust gleich null, da Supraleiter keinen Widerstand haben.
+Allerdings sind 3,5\% Leistungsverlust auch nicht sehr viel. Außerdem müssen Supraleiter auch ständig gekühlt werden, weshalb sie 
+wirtschaftlich nicht um bedingt besser sind. Allerdings finden Supraleiter schon heute Anwendung im kleineren Maßstab. In
+Städten können diese gut Platz sparen, da ein Supraleiter eine viel geringere Spannung als ein normaler Leiter benötigt.
+So kann ein Umspannwerk für 110kV, welches der Fläche einer Turnhalle entspricht auf ein Umspannwerk für 10kV, welches nur die
+Fläche einer Doppelgarage benötigt, ersetzt werden. 
+
+Auch in der medizinischen Magnetresonanztomografie (MRT) kommen Supraleiter in einem bedeutenden Anwendungsbereich zum Einsatz. Supraleiter kommen hier zum Einsatz, um die für die Bildgebung erforderlichen extrem starken Magnetfelder zu erzeugen. Da Supraleiter keinen elektrischen Widerstand besitzen, sind diese Magnetfelder stabil und effizient. 
+Supraleiter werden auch in der Teilchenphysik eingesetzt, etwa in Teilchenbeschleunigern wie dem Large Hadron Collider (LHC). Supraleitende Magnete kommen dort zum Einsatz, um die Teilchenstrahlen auf ihrer Bahn zu halten und zu bündeln.
+Supraleitende Quantencomputer stellen ein zusätzliches Anwendungsfeld dar. Mit supraleitenden Schaltkreisen können Qubits realisiert werden, die für Quantenberechnungen essenziell sind. 
+
+Zudem finden Supraleiter in der Energietechnik Anwendung, wie etwa in supraleitenden Stromspeichern (SMES), die elektrische Energie verlustfrei speichern. In der Zukunft könnte diese Technologie eine bedeutende Funktion bei der Stabilisierung von Stromnetzen übernehmen. 
+Es existieren auch Anwendungen in der Magnetbahntechnologie, wie bei Magnetschwebebahnen (Maglev). Supraleiter machen hier die Bildung intensiver Magnetfelder möglich, die das Schwebebetriebs- und Reibungslosigkeitsprinzip der Züge gewährleisten. 
