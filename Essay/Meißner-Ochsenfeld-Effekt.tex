@@ -42,11 +42,12 @@ Supraleiter nicht nur ideale Leiter, sondern auch perfekte Diamagneten.
         \end{scope}
     \end{tikzpicture}
     \caption{Meißner-Ochsenfeld-Effekt}
+    \label{fig:meissner_ochsenfeld}
 \end{figure}
 
 Nimmt man ein Superleitendes Material mit einer Temperatur höher als die kritische Temperatur $T_c$
-und setzt es einem Magnetfeld aus, so dringt das Magnetfeld nahezu ungehindert durch das Material (wie links in Abbildung 3 zusehen ist). 
-Wenn man den Supraleiter jetzt unter die kritische Temperatur abkühlt, wird das Magnetfeld aus dem Inneren des Supraleiters verdrängt (Abbildung 3 rechts).
+und setzt es einem Magnetfeld aus, so dringt das Magnetfeld nahezu ungehindert durch das Material (wie links in Abbildung \ref{fig:meissner_ochsenfeld} zusehen ist). 
+Wenn man den Supraleiter jetzt unter die kritische Temperatur abkühlt, wird das Magnetfeld aus dem Inneren des Supraleiters verdrängt (Abbildung \ref{fig:meissner_ochsenfeld} rechts).
 Doch eigentlich müsste doch das Magnetfeld weiterhin ungehindert das Material durchdringen können, da der 
 Widerstand gleich null ist, kann keine Spannung abfallen oder induziert werden, wodurch sich das Magnetfeld 
 eigentlich nicht verändern dürfte.
@@ -56,15 +57,34 @@ versuchten 1935 die charakteristischen Eigenschaften der Supraleitung durch ihre
 zu beschreiben. Daraus folgte dann das ein äußeres Magnetfeld doch in eine dünne Oberflächenschicht des Supraleiters eindringt (Eindringtiefe $\lambda_L$).
 Die Eindringtiefe $\lambda_L$ beschreibt die charakteristische Abklingtiefe des Magnetfeldes.
 Durch folgende Gleichung lässt sich zeigen das, dass eindringende Magnetfeld exponentiell abnimmt.
-
 \begin{equation}
-    \vec{B}(x) = \vec{B}_0 e^{-\frac{x}{\lambda_L}}
+    B(x) = B_0 e^{-\frac{x}{\lambda_L}}
 \end{equation}
+Dabei ist $B(x)$ das Magnetfeld in einer Tiefe $x$ im Supraleiter, $B_0$ die Stärke des äußeren Magnetfeldes, $x$ die Tiefe im Supraleiter und $\lambda_L$ die Londonsche Eindringtiefe.
+Grafisch dargestellt sieht das wie in Abbildung \ref{fig:magnetfeld_abklingen} aus.
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xlabel={Tiefe \(x\) (nm)},
+            ylabel={Magnetfeld \(B(x)\) (mT)},
+            legend pos=north east,
+            grid=major,
+            domain=0:150,
+            samples=150
+        ]
+            \addplot[blue, thick, dashed] {100*exp(-x/16)};
+            \addlegendentry{Aluminium (\(\lambda_L = 16\) nm)}
 
-Dabei ist $\vec{B}$ das Magnetfeld im Supraleiter, $\vec{B}_0$ das Magnetfeld außerhalb des Supraleiters, $d$ die Tiefe in den Supraleiter und $\lambda_L$ die Londonsche Eindringtiefe.
-\\
-\\
-Das Magnetfeld, welches in diese dünne Schicht eindringt, führt zu einem supraleitendem Stromfluss, welcher ein
+            \addplot[red, thick] {100*exp(-x/37)};
+            \addlegendentry{Blei (\(\lambda_L = 37\) nm)}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Exponentielles Abklingen des Magnetfelds in Aluminium und Blei.}
+    \label{fig:magnetfeld_abklingen}
+\end{figure}
+
+Das Magnetfeld, welches in diese dünne Schicht eindringt, führt zu einem supraleitendem Stromfluss, welcher ein 
 Magnetfeld erzeugt, was gerade so stark ist um das äußere Magnetfeld aufzuheben, was 
 die Begründung für den Meißner-Ochsenfeld-Effekt ist. 
 
